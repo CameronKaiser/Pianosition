@@ -1,6 +1,6 @@
 {
   "name": "pianosition",
-  "homepage": "http://CameronKaiser.github.io/Pianosition",
+  "homepage": "https://cameronkaiser.github.io/Pianosition",
   "private": false,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "deploy" : "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
