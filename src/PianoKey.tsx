@@ -20,7 +20,7 @@ type props = {
     keyAssist: boolean;
     maxVolume:     number;
     addNote:    (pitchClass: string, octave: number, chromaticIndex: number, audio: HTMLAudioElement) => void;
-    deleteNote: (pitchClass: string, octave: number, chromaticIndex: number) => void;
+    deleteNote: (octave: number, chromaticIndex: number) => void;
     selectKey: (tonic: string, tonicChromaticIndex: number, index: number) => void;
 }
 
@@ -83,7 +83,7 @@ export function Key({index, type, useSharps, sharpPitchClass, flatPitchClass, oc
                     accidentalIndex.current[currentBar] = rightClick == false ? useSharps : !useSharps;
                 } else {
                     fadeOut(audio, 300)
-                    deleteNote(pitchClass, octave, chromaticIndex);
+                    deleteNote(octave, chromaticIndex);
                     pressIndex.current[currentBar] = false;
                     accidentalIndex.current[currentBar] = useSharps;
                 }

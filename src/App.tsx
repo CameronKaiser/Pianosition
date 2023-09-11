@@ -239,7 +239,7 @@ function App() {
     }
 
 //  Add a fading property to the given note, deleting it after the fade has completed
-    const deleteNote = (pitchClass: string, octave: number, chromaticIndex: number) => {
+    const deleteNote = (octave: number, chromaticIndex: number) => {
 
         let updatedNotes = [...bars[currentBar]];
         
@@ -365,6 +365,7 @@ function App() {
 //  Fade out audio using the input parameter as timing. 
 //  Javascript has a significant amount of overhead on audio manipulations, so this takes longer than expected
    const fadeOut = (audio: HTMLAudioElement, milliseconds: number) =>{
+        milliseconds == milliseconds;
         setTimeout(() => {
             audio.pause();
             setTimeout(() => {
@@ -421,7 +422,6 @@ function App() {
                           notes      = { bar                  }
                           bar        = { index                }
                           tonalKey   = { tonalKey as TonalKey }
-                          currentBar = { currentBar           } 
                         />
               })}
             </div>

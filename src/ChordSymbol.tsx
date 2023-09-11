@@ -8,10 +8,9 @@ import { AnalyzedChord      } from './ChordAnalyzer.tsx'
         notes: Note[]
         tonalKey : TonalKey
         bar: number;
-        currentBar: number;
     }
 
-    export function ChordSymbol({notes, tonalKey, bar, currentBar} : props) {
+    export function ChordSymbol({notes, tonalKey, bar} : props) {
 
         if(notes.length == 0) {
             return;
