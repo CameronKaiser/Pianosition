@@ -107,7 +107,7 @@ import { AnalyzedChord } from './ChordAnalyzer.tsx'
 
         return(
             <div className={"analysis" + (bar == currentBar ? " current-bar" : "")} style={{left: leftOffset, fontSize: fontSize, lineHeight: lineHeight}}>
-                {analyzedChord.function}
+                {analyzedChord.alteration}{analyzedChord.function}
                 {extendedQuality}
                 {intervalsElement}
                 {forerunner}
